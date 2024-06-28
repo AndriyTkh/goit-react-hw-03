@@ -5,10 +5,16 @@ export default function Contact({ name, number }) {
     <>
       <ul className={css.bioList}>
         <li>
-          O <p>{name}</p>
+          <svg width="20" height="20">
+            <use href="/src/symbol-defs.svg#icon-user"></use>
+          </svg>
+          <p>{name}</p>
         </li>
         <li>
-          P <p>{number}</p>
+          <svg width="20" height="20">
+            <use href="/src/symbol-defs.svg#icon-phone"></use>
+          </svg>
+          <p>{number}</p>
         </li>
       </ul>
       <button type="button" className={css.deleteBtn}>

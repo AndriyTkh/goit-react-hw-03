@@ -1,11 +1,12 @@
 .bioList {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 8px;
 }
 .bioList li {
   display: flex;
-  gap: 8px;
+  align-items: flex-end;
+  gap: 12px;
 }
 
 .deleteBtn {
@@ -13,4 +14,9 @@
 
   border: 1px solid grey;
   border-radius: 4px;
+}
+
+.deleteBtn:hover,
+.deleteBtn:focus {
+  background-color: lightgrey;
 }
