@@ -1,0 +1,45 @@
+.form {
+  border: 1px solid black;
+  border-radius: 4px;
+  max-width: 264px;
+
+  padding: 12px;
+  margin-top: 12px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.form label {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 4px;
+}
+
+.field {
+  border: 1px solid grey;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.field:nth-child(2) {
+  margin-bottom: 32px;
+}
+
+.submitBtn {
+  border: 1px solid grey;
+  border-radius: 4px;
+  cursor: pointer;
+
+  height: 24px;
+  width: 90px;
+
+  align-self: center;
+  margin-top: 12px;
+}
+
+.submitBtn:hover,
+.submitBtn:focus {
+  background-color: lightgray;
+}
