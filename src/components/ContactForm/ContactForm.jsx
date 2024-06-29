@@ -11,6 +11,11 @@ const validation = Yup.object().shape({
   number: Yup.number().required("Required"),
 });
 
+const init = {
+  username: "",
+  number: "",
+};
+
 const handleSubmit = (values, actions) => {
   console.log(values);
   actions.resetForm();
@@ -22,18 +27,41 @@ export default function ContactForm() {
 
   return (
     <div>
-      <Formik onSubmit={handleSubmit} validationSchema={validation}>
+      <Formik
+        onSubmit={handleSubmit}
+        validationSchema={validation}
+        initialValues={init}
+      >
         <Form className={css.form}>
-          <label htmlFor={nameId}>Name</label>
-          <Field
-            className={css.field}
-            type="text"
-            name="username"
-            id={nameId}
-          />
+          <div className={css.inputBox}>
+            <label htmlFor={nameId}>Name</label>
+            <Field
+              className={css.field}
+              type="text"
+              name="username"
+              id={nameId}
+            />
+            <ErrorMessage
+              className={css.error}
+              name="username"
+              component="span"
+            />
+          </div>
 
-          <label htmlFor={numberId}>Number</label>
-          <Field className={css.field} type="tel" name="number" id={numberId} />
+          <div className={css.inputBox}>
+            <label htmlFor={numberId}>Number</label>
+            <Field
+              className={css.field}
+              type="tel"
+              name="number"
+              id={numberId}
+            />
+            <ErrorMessage
+              className={css.error}
+              name="number"
+              component="span"
+            />
+          </div>
 
           <button type="submit" className={css.submitBtn}>
             Add contact

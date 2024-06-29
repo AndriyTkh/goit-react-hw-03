@@ -10,11 +10,13 @@
   flex-direction: column;
 }
 
-.form label {
+.inputBox {
   display: flex;
   flex-direction: column;
-
-  margin-bottom: 4px;
+  gap: 4px;
+}
+.inputBox:nth-child(1) {
+  margin-bottom: 28px;
 }
 
 .field {
@@ -23,8 +25,9 @@
   padding: 4px;
 }
 
-.field:nth-child(2) {
-  margin-bottom: 32px;
+.error {
+  color: red;
+  font-size: 12px;
 }
 
 .submitBtn {
