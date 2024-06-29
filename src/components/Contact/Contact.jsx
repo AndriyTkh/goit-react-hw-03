@@ -1,6 +1,6 @@
 import css from "./Contact.module.css";
 
-export default function Contact({ name, number }) {
+export default function Contact({ data: { name, number, id }, deleteContact }) {
   return (
     <>
       <ul className={css.bioList}>
@@ -17,7 +17,13 @@ export default function Contact({ name, number }) {
           <p>{number}</p>
         </li>
       </ul>
-      <button type="button" className={css.deleteBtn}>
+      <button
+        type="button"
+        className={css.deleteBtn}
+        onClick={() => {
+          deleteContact(id);
+        }}
+      >
         Delete
       </button>
     </>
